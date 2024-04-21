@@ -51,7 +51,7 @@ const AddBlogx = (props: Props) => {
             />
           </div>
           <div>
-            <input
+            <textarea className="p-5 m-3 rounded-md"
               type="text"
               name="desc"
               id="desc"
