@@ -18,8 +18,11 @@ const AddBlogx = (props: Props) => {
   const [desc, setDesc] = useState('');
 
 
-  const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleChange1 = (event: ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
+  };
+
+  const handleChange2 = (event: ChangeEvent<HTMLInputElement>) => {
     setDesc(event.target.value);
   };
 
@@ -44,7 +47,7 @@ const AddBlogx = (props: Props) => {
               id="title"
               placeholder="Title"
               value={title}
-              onChange={handleChange}
+              onChange={handleChange1}
             />
           </div>
           <div>
@@ -54,7 +57,7 @@ const AddBlogx = (props: Props) => {
               id="desc"
               placeholder="Description"
               value={desc}
-              onChange={handleChange}
+              onChange={handleChange2}
             />
           </div>
           <button className="bg-amber-400 hover:bg-amber-600 rounded p-1">

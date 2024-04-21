@@ -11,12 +11,8 @@ const blogsData = [
     title: 'Blog title 1',
     desc: 'this is description one part',
   },
-  {
-    id: '2',
-    title: 'Blog title 2',
-    desc: 'this is description part two',
-  },
 ];
+  
 
 
 
