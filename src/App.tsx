@@ -8,12 +8,12 @@ import Blogs from "./components/Blogs";
 const blogsData = [
   {
     id: '1',
-    title: 'todo title 1',
+    title: 'Blog title 1',
     desc: 'this is description one part',
   },
   {
     id: '2',
-    title: 'todo title 2',
+    title: 'Blog title 2',
     desc: 'this is description part two',
   },
 ];

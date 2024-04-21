@@ -34,29 +34,32 @@ const AddBlogx = (props: Props) => {
 
   return (
     <>
-      <h2>Add Blogs</h2>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <input
-            type="text"
-            name="title"
-            id="title"
-            placeholder="title"
-            value={title}
-            onChange={handleChange}
-          />
-        </div>
-        <div>
-          <input
-            type="text"
-            name="desc"
-            id="desc"
-            placeholder="description"
-            value={desc}
-            onChange={handleChange} />
-        </div>
-        <button>Add Blog</button>
-      </form>
+      <div className="bg-indigo-400 p-10 text-center">
+        <h2 className="font-bold text-xl">Add Blogs</h2>
+        <form onSubmit={handleSubmit} className="p-1 bg-violet-400 rounded-md">
+          <div>
+            <input
+              type="text"
+              name="title"
+              id="title"
+              placeholder="Title"
+              value={title}
+              onChange={handleChange}
+            />
+          </div>
+          <div>
+            <input
+              type="text"
+              name="desc"
+              id="desc"
+              placeholder="Description"
+              value={desc}
+              onChange={handleChange}
+            />
+          </div>
+          <button className="bg-amber-400 rounded p-1">Add Blog</button>
+        </form>
+      </div>
     </>
   );
 }
