@@ -12,9 +12,11 @@ type Props = {
 };
 
 const AddBlogx = (props: Props) => {
+
+
   const [title, setTitle] = useState('');
   const [desc, setDesc] = useState('');
-};
+
 
   const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
     setTitle(event.target.value);
@@ -23,15 +25,13 @@ const AddBlogx = (props: Props) => {
 
   const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const newBlog: Blog = { id: uuidv4().toString(), title, desc };
+    const newBlog: Blog = { id: uuidv4().toString(), title, desc};
     props.handleAddNewBlog(newBlog);
     setTitle('');
     setDesc('');
   };
 
 
-
-const AddBlog = () => {
   return (
     <>
       <h2>Add Blogs</h2>
@@ -42,12 +42,18 @@ const AddBlog = () => {
             name="title"
             id="title"
             placeholder="title"
-            value={}
+            value={title}
             onChange={handleChange}
           />
         </div>
         <div>
-          <input type="text" name="" id="" />
+          <input
+            type="text"
+            name="desc"
+            id="desc"
+            placeholder="description"
+            value={desc}
+            onChange={handleChange} />
         </div>
         <button>Add Blog</button>
       </form>
@@ -55,4 +61,4 @@ const AddBlog = () => {
   );
 }
 
-export default AddBlog
+export default AddBlogx;

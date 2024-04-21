@@ -1,35 +1,45 @@
-import { useState } from "react"
-import AddBlog from "./components/AddBlog";
+import { useState } from "react";
+import AddBlogx from "./components/AddBlog";
+import { blogType } from "./types/types";
 import Blogs from "./components/Blogs";
 
-const blogData = 
+
+
+const blogsData = [
   {
-  title: "1st blog",
-  desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolorum veritatis perspiciatis consectetur porro voluptatibus"
-  }
+    id: '1',
+    title: 'todo title 1',
+    desc: 'this is description one part',
+  },
+  {
+    id: '2',
+    title: 'todo title 2',
+    desc: 'this is description part two',
+  },
+];
 
 
 
 function App() {
-
-  const [blogs, setBlog] = useState(blogData);
+  const [blogs, setBlogs] = useState(blogsData);
 
   const handleDeleteBlog = (id: string) => {
-    const filterBlog = blogs.filter(blog => blog.id !== id);
-    setBlog(filterBlog);
+    const filterTodos = blogs.filter(blog => blog.id !== id);
+    setBlogs(filterTodos);
   };
 
-  const handleAddNewBlog = (newBlog: blogType) => {
-    setBlog((prevState) => [...prevState, newBlog]);
+  const handleAddNewTodo = (newTodo: blogType) => {
+    console.log(newTodo);
+    setBlogs(prevState => [...prevState, newTodo]);
   };
 
   return (
     <>
-      <AddBlog />
-      
-      <Blogs/>
+      <AddBlogx handleAddNewBlog={handleAddNewTodo} />
+      <Blogs blogs={blogs}
+        handleDeleteBlog={handleDeleteBlog} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
