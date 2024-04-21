@@ -57,7 +57,9 @@ const AddBlogx = (props: Props) => {
               onChange={handleChange}
             />
           </div>
-          <button className="bg-amber-400 rounded p-1">Add Blog</button>
+          <button className="bg-amber-400 hover:bg-amber-600 rounded p-1">
+            Add Blog
+          </button>
         </form>
       </div>
     </>
